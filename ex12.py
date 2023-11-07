@@ -92,35 +92,25 @@ def calculadora_binari():
     d = 1
     while d>0:
         print(""" 
-              1. Sumar 
-              2. Restar
-              3. Multiplicar 
-              4. Dividir
-              5. Salir
+              1. Binari a decimal 
+              2. Decimal a binari
+              3. Sortir
         """)
         d = int(input("Elegeix una opció: "))
         match d:
-            case 1: #Sumar
-                x = bin(input("Introdueix el primer nombre: "))
-                y = bin(input("Elegeix el segon nombre: "))
-                print("{} + {} = {}".format(x, y, x+y))
+            case 1: #Binari a decimal
+                def binario_decimal():
+	                numero = int(input('Introduce un número:\n'))
+	            convertido = bin(numero)
+	            print(convertido)
+                    binario_decimal()
 
-            case 2: #Restar
+            case 2: #Decimal a binari
                 x = bin(input("Introdueix el primer nombre: "))
                 y = bin(input("Elegeix el segon nombre: "))
                 print("{} - {} = {}".format(x, y, x-y))
-            
-            case 3: #Multiplicar
-                x = bin(input("Introdueix el primer nombre: "))
-                y = bin(input("Elegeix el segon nombre: "))
-                print("{} * {} = {}".format(x, y, x*y))
-            
-            case 4: #Dividir
-                x = bin(input("Introdueix el primer nombre: "))
-                y = bin(input("Elegeix el segon nombre: "))
-                print("{} / {} = {}".format(x, y, x/y))
 
-            case 5: #Sortir
+            case 3: #Sortir
                 print("Adeu :,(")
                 d = -1
 
@@ -143,8 +133,8 @@ def calculadora_octal():
                 print("{} + {} = {}".format(x, y, x+y))
 
             case 2: #Restar
-                x = oct(input("Introdueix el primer nombre: "))
-                y = oct(input("Elegeix el segon nombre: "))
+                x = int(oct,("Introdueix el primer nombre: "))
+                y = int(oct, 8("Elegeix el segon nombre: "))
                 print("{} - {} = {}".format(x, y, x-y))
             
             case 3: #Multiplicar
