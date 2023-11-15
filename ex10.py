@@ -10,3 +10,4 @@ def major(a):
 #Programa principal
 x = int(input("Introdueixi la seva edat: "))
 major(x)
+

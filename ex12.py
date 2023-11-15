@@ -3,11 +3,8 @@ def menu_principal():
         Menú principal:
           1. Calculadora de enters
           2. Calculadora de reals
-          3. Calculadora de binari
-          4. Clculadora de octal
-          5. Calculadora de hexadecimal
-          6. Sortir
-    
+          3. Canvis de base
+          4. Sortir   
     """)
     a = int(input("Elegeix una opció: "))
     return a
@@ -38,7 +35,7 @@ def calculadora_enters():
                 x = int(input("Introdueix el primer nombre: "))
                 y = int(input("Elegeix el segon nombre: "))
                 print("{} * {} = {}".format(x, y, x*y))
-            
+
             case 4: #Dividir
                 x = int(input("Introdueix el primer nombre: "))
                 y = int(input("Elegeix el segon nombre: "))
@@ -47,9 +44,6 @@ def calculadora_enters():
             case 5: #Sortir
                 print("Adeu :,(")
                 b = -1
-       
-
-
 def calculadora_reals():
     print("Has triat la calculadora de reals: ")
     c = 1
@@ -85,108 +79,113 @@ def calculadora_reals():
             
             case 5: #Sortir
                 print("Adeu :,(")
-                c = -1
-       
-def calculadora_binari():
-    print("Has triat la calculadora d'enters")
-    d = 1
-    while d>0:
-        print(""" 
-              1. Binari a decimal 
-              2. Decimal a binari
-              3. Sortir
+                c = -1 
+# Def binari a
+def bintooct(bin_num):
+    dec_num = int(bin_num, 2)
+    oct_num = oct(dec_num)
+    return oct_num
+
+def bintodec(bin_num):
+    dec_num = int(bin_num, 2)
+    return dec_num
+
+def bintohex(bin_num):
+    dec_num = int(bin_num, 2)
+    hex_num = hex(dec_num)
+    return hex_num[2:]
+
+# Def octal a
+
+def octtobin(oct_num):
+    dec_num = int(oct_num, 8)
+    bin_num = bin(dec_num)
+    return bin_num[2:]
+
+def octtodec(oct_num):
+    dec_num = int(oct_num, 8)
+    return dec_num
+
+def octtohex(oct_num):
+    dec_num = int(oct_num, 8)
+    hex_num = hex(dec_num)
+    return hex_num[2:]
+
+# Def decimal to
+
+def dectobin(dec_num):
+    bin_num = bin(int(dec_num))
+    return bin_num[2:]
+
+def dectooct(dec_num):
+    oct_num = oct(int(dec_num))
+    return oct_num[2:]
+
+def dectohex(dec_num):
+    hex_num = hex(int(dec_num))
+    return hex_num[2:]
+
+# Def hexadecimal to
+
+def hextobin(hex_num):
+    dec_num = int(hex_num, 16)
+    bin_num = bin(dec_num)
+    return bin_num[2:]
+
+def hextooct(hex_num):
+    dec_num = int(hex_num, 16)
+    oct_num = oct(dec_num)
+    return oct_num[2:]
+
+def hextodec(hex_num):
+    dec_num = int(hex_num, 16)
+    return dec_num
+
+def canvi_base():
+    print("Hem passat per canvi de base: ")
+    op = 1
+    while op>0:
+        print("""
+              Menú canvi de base
+              1. Donat un binari ho passem a tota la resta
+              2. Donat un octal ho passen a tota la resta
+              3. Donat un decimal ho passem a tota la resta
+              4. Donat un hexadecimal ho passem a tota la resta
+              5. Sortir
         """)
-        d = int(input("Elegeix una opció: "))
-        match d:
-            case 1: #Binari a decimal
-                def binario_decimal():
-	                numero = int(input('Introduce un número:\n'))
-	            convertido = bin(numero)
-	            print(convertido)
-                    binario_decimal()
+        op = int(input("Elegeix una opció: "))
+        match op:
+            case 1: #Binari to 
+                b = input("Introdueix el numero binari: ")
+                c = bintooct(b)
+                d = bintodec(b)
+                e = bintohex(b)
+                print("El nuemro binari {} es: \n oct -> {} \n dec -> {} \n hex -> {}".format(b,c,d,e))
 
-            case 2: #Decimal a binari
-                x = bin(input("Introdueix el primer nombre: "))
-                y = bin(input("Elegeix el segon nombre: "))
-                print("{} - {} = {}".format(x, y, x-y))
-
-            case 3: #Sortir
-                print("Adeu :,(")
-                d = -1
-
-def calculadora_octal():
-    print("Has triat la calculadora d'enters")
-    e = 1
-    while e>0:
-        print(""" 
-              1. Sumar 
-              2. Restar
-              3. Multiplicar 
-              4. Dividir
-              5. Salir
-        """)
-        e = int(input("Elegeix una opció: "))
-        match e:
-            case 1: #Sumar
-                x = oct(input("Introdueix el primer nombre: "))
-                y = oct(input("Elegeix el segon nombre: "))
-                print("{} + {} = {}".format(x, y, x+y))
-
-            case 2: #Restar
-                x = int(oct,("Introdueix el primer nombre: "))
-                y = int(oct, 8("Elegeix el segon nombre: "))
-                print("{} - {} = {}".format(x, y, x-y))
-            
-            case 3: #Multiplicar
-                x = oct(input("Introdueix el primer nombre: "))
-                y = oct(input("Elegeix el segon nombre: "))
-                print("{} * {} = {}".format(x, y, x*y))
-            
-            case 4: #Dividir
-                x = oct(input("Introdueix el primer nombre: "))
-                y = oct(input("Elegeix el segon nombre: "))
-                print("{} / {} = {}".format(x, y, x/y))
+            case 2: #Octal to 
+                b = input("Introdueix el numero octal: ")
+                c = octtobin(b)
+                d = octtodec(b)
+                e = octtohex(b)
+                print("El nuemro octal {} es: \n bin -> {} \n dec -> {} \n hex -> {}".format(b,c,d,e))
+                
+            case 3: #Decimal to 
+                b = input("Introdueix el numero decimal: ")
+                c = dectobin(b)
+                d = dectooct(b)
+                e = dectohex(b)
+                print("El nuemro octal {} es: \n bin -> {} \n oct -> {} \n hex -> {}".format(b,c,d,e))
+                
+            case 4: #Hexadecimal to 
+                b = input("Introdueix el numero hexadecimal: ")
+                c = hextobin(b)
+                d = hextooct(b)
+                e = hextodec(b)
+                print("El numero octal {} es: \n bin -> {} \n oct -> {} \n dec -> {}".format(b,c,d,e))
 
             case 5: #Sortir
                 print("Adeu :,(")
-                e = -1
-            
-def calculadora_hexadec():
-    print("Has triat la calculadora d'enters")
-    f = 1
-    while f>0:
-        print(""" 
-              1. Sumar 
-              2. Restar
-              3. Multiplicar 
-              4. Dividir
-              5. Salir
-        """)
-        f = int(input("Elegeix una opció: "))
-        match f:
-            case 1: #Sumar
-                x = hex(input("Introdueix el primer nombre: "))
-                y = hex(input("Elegeix el segon nombre: "))
-                print("{} + {} = {}".format(x, y, x+y))
-
-            case 2: #Restar
-                x = hex(input("Introdueix el primer nombre: "))
-                y = hex(input("Elegeix el segon nombre: "))
-                print("{} - {} = {}".format(x, y, x-y))
-            
-            case 3: #Multiplicar
-                x = hex(input("Introdueix el primer nombre: "))
-                y = hex(input("Elegeix el segon nombre: "))
-                print("{} * {} = {}".format(x, y, x*y))
-            
-            case 4: #Dividir
-                x = hex(input("Introdueix el primer nombre: "))
-                y = hex(input("Elegeix el segon nombre: "))
-                print("{} / {} = {}".format(x, y, x/y))
-
-            case 5: #Sortir
-                print("Adeu :,(")
-                f = -1
+                b = -1  
 #Programa principal
 
 a = 1
@@ -198,12 +197,8 @@ while a>0:
         case 2:
             calculadora_reals()
         case 3:
-            calculadora_binari()
+            canvi_base()
         case 4:
-            calculadora_octal()
-        case 5:
-            calculadora_hexadec()
-        case 6:
             a = -1
         case other:
             print("Opció no vàlida")
