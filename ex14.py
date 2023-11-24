@@ -42,3 +42,12 @@ elif x==y==z:
 else:
     print("Tots tres nombres son iguals")
 
+def major(n,m,ñ):
+    if n>m>ñ:
+        return n
+    else:
+        return m
+a= int(input('Intro el 1r numero: '))
+b= int(input('Intro el 2r numero: '))
+c= major(a,b)
+print('El major de {} i {} és {}'. format(a,b,c))

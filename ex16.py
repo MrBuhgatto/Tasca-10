@@ -16,7 +16,7 @@ def llegir_caràcter():
         elif a == ('u'):
             print('vertader')
         else:
-            print('fals')
-        
+            print('fals') 
+                
 # Programa principal
 a= llegir_caràcter()

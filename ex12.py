@@ -126,20 +126,41 @@ def dectohex(dec_num):
     return hex_num[2:]
 
 # Def hexadecimal to
-
-def hextobin(hex_num):
-    dec_num = int(hex_num, 16)
-    bin_num = bin(dec_num)
-    return bin_num[2:]
-
-def hextooct(hex_num):
-    dec_num = int(hex_num, 16)
-    oct_num = oct(dec_num)
-    return oct_num[2:]
-
-def hextodec(hex_num):
-    dec_num = int(hex_num, 16)
-    return dec_num
+#Hexadecimal a binari, octal i decimal
+def hextonum(hex):
+    pnum = {
+        "f": 15,
+        "e": 14,
+        "d": 13,
+        "c": 12,
+        "b": 11,
+        "a": 10,
+    }
+    if hex in pnum:
+        return pnum[hex]
+    else:
+        return int(hex)
+def hextodec2(hex):
+    hex =hex.lower()
+    hex =hex[::-1]
+    decimal = 0
+    posicio = 0
+    for digit in hex:
+        valor = hextonum(digit)
+        elevat = 16 ** posicio
+        pnum = elevat * valor
+        decimal += pnum
+        posicio += 1
+    return decimal
+def hextobin(numero):
+    a=int(numero,16)
+    return dectobin(a)
+def hextooct(numero):
+    a=int(numero,16)
+    return dectooct(a)
+def hextodec(numero):
+    a=int(hextodec2(numero))
+    return a
 
 def canvi_base():
     print("Hem passat per canvi de base: ")

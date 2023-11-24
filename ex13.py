@@ -1,14 +1,10 @@
 # Exercici 13: Definir una funció gran() que, donats dos números, retorni el major.  Prova-la amb diferents exemples.
-
-x = int(input("Introdueix el primer nombre: "))
-y = int(input("Introdueix el segon nombre: "))
-
-if x>y:
-    print("El nombre més gran és: {}".format(x))
-
-elif x<y:
-    print("El nombre més gran és: {}".format(y))
-
-else:
-    print("Els dos nombre son iguals")
-
+def major(n,m):
+    if n>m:
+        return n
+    else:
+        return m
+a= int(input('Intro el 1r numero: '))
+b= int(input('Intro el 2r numero: '))
+c= major(a,b)
+print('El major de {} i {} és {}'. format(a,b,c))
