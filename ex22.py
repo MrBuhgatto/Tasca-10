@@ -2,30 +2,13 @@
 #..
 #...
 #....
-"""def llegir_llista():
-    a= 'o'
-    l=[]
-    while a!='.':
-        a=input("Introdueix una llista: ")
-        if a == '.':
-            l.append(int(a))
-        else:
-            return l
-        
-def crear_punts():
-    a='.'
-    b=llegir_llista()
-    c=b
-    for a in c:
-        print(c * '.')
-    return a[::-1]   
-print(crear_punts())
-l=llegir_llista()"""
+def crear_repetits(a, b):
+    c = b * int(a)
+    return c
 
-
-def crear_puntos(l):
-    for n in l:
-        print("." * n)
-
-#Program principal
-crear_puntos([1, 2, 3])
+def crear_punts(a):
+    for e in a:
+        c = crear_repetits(int(e), '.')
+        print(c)
+a = input("Escriu una llista numèrica d'elements separats per comes: ")
+crear_punts(a)

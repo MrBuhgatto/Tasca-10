@@ -1,11 +1,11 @@
 ###Definir una funció gran_llista() que donada una llista de número ens retorni el més gran. 
 ###Ex: gran_llista([3, 4, 2, 3, 10]), retorni 10.
 
-def gran_llista():
-    a= list(input('Introdueix una llista: '))
+def gran_llista(a):
     a.sort()
-    c=a[-1]
-    print(c)
-a=gran_llista()
+    return a[-1]
 
-#Funciona amb nombres de 0 a 9
+# Programa principal
+a = [3, 40, 34, 15, 4, 5, 7, 9]
+c = gran_llista(a)
+print(c)
