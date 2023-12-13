@@ -1,11 +1,5 @@
-x = input("Introdueixi la primera paraula: ")
-y = input("Introdueixi la segona paraula: ")
-
-if x[-3:] == y[-3:]:
-    print("Les paraules {} i {} rimen les darreres tres lletres {}".format(x, y, x[-3:]))
-elif x[-2:] == y[-2:]:
-    print("Les paraules {} i {} rimen les darreres dues lletres {}".format(x, y, x[-2:]))    
-elif x[-1:] == y[-1:]:
-    print("Les paraules {} i {} rimen la darrera lletra {}".format(x, y, x[-1:]))
-else:
-    print("Les paraules {} i {} no rimen".format(x, y))
+x = float(input("Introdueixi la quantitat sol·licitada (50000 i 80000) euros: "))
+y = float(input("Introdueixi l'interés (0.5 i 13) percentatge: "))
+z = int(input("Introdueixi el número d'anys: "))
+cfinal = x * (1 + y/100)**z
+print("El capital {}€ a un interés del {}% a {} anys resulta que pagarem {:.2f}€".format(x, y, z, cfinal))
