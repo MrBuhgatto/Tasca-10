@@ -4,7 +4,7 @@
 import random
 import time
 
-# Funció on expliquem què passa
+#Funció que introdueix la situació del joc
 def intro():
     print("""En una època on els gegants governen Menorca. Nosaltres necessitem menjar,
     Estem seguint el rastre de l'olor del menjar, però ens trobem en una cruïa.
@@ -12,14 +12,14 @@ def intro():
     i en l'altre són uns caníbals afamats, i ens menjaràn just ens vegin.
     """)
 
-# Funció on demanem a quin talaiot volem anar
+#Funció que demana a quin talaiot volem anar
 def canviTalaiot():
     talaiot = ""
     while talaiot != "1" and talaiot != "2":
         talaiot = input("A quin Talaiot vols anar? Introdueixi 1 o 2: ")
     return talaiot
 
-# Funció que ens indica si comparteixen el menjar o serem nosaltres el seu àpat
+#Funció que indica si compartiran el menjar o serem l'àpat
 def trobada(canviTalaiot, punts):
     print("T'estas apropant al talaiot...")
     time.sleep(2)
@@ -36,7 +36,7 @@ def trobada(canviTalaiot, punts):
         print("Se't menja d'un mos...ÑAMÑAMÑAM\nTens {} punts".format(punts))
         punts -= 1
 
-# Funció principal
+#Funció principal
 punts = 0
 partidaNova = "si"
 while partidaNova == "s" or partidaNova == "si":
@@ -45,3 +45,4 @@ while partidaNova == "s" or partidaNova == "si":
     trobada(nTalaiot, punts)
     partidaNova = input("Vols tornar a mejar (jugar)? Introdueixi si o no: ")
     print("\n")
+

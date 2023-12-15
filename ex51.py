@@ -1,3 +1,4 @@
+#Funció per llegir una llista de paraules fins que es posi un punt i les ordena
 def llegir_llista_paraules():
     b = []
     a = "a"
@@ -8,10 +9,11 @@ def llegir_llista_paraules():
     b.sort()
     return b
 
+#Funció per trobar els índexs d'una paraula en una llista
 def index_paraula(llista, paraula):
     return [i for i, e in enumerate(llista) if paraula == e]
 
-# Programa principal
+#Programa principal
 a = llegir_llista_paraules()
 p = input("Introdueix la paraula a cercar el seu índex: ")
 b = index_paraula(a, p)

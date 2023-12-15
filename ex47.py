@@ -1,3 +1,4 @@
+#Funció per verificar si hi ha elements duplicats en una llista
 def hi_ha_duplicats(a):
     seen = set()
     dupes = [x for x in a if x in seen or seen.add(x)]
@@ -6,6 +7,7 @@ def hi_ha_duplicats(a):
     else:
         print("La llista {} no té elements duplicats {}".format(a, dupes))
 
+#Funció per llegir una llista fins que es posa un punt
 def llegir_llista():
     a = []
     c = "a"
@@ -15,6 +17,6 @@ def llegir_llista():
             a.append(c)
     return a
 
-# Programa principal
+#Programa principal
 a = llegir_llista()
 hi_ha_duplicats(a)

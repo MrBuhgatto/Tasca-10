@@ -1,3 +1,4 @@
+#Funció per verificar si una llista està ordenada ascendentment, descendentment o no està ordenada
 def esta_ordenada(a):
     b = a.copy()
     c = a.copy()
@@ -10,6 +11,7 @@ def esta_ordenada(a):
     else:
         print("La llista {} no està ordenada {}".format(a, b))
 
+#Funció per llegir una llista fins que es posa un punt
 def llegir_llista():
     a = []
     c = "a"
@@ -19,6 +21,6 @@ def llegir_llista():
             a.append(c)
     return a
 
-# Pprincipal
+#Programa principal
 a = llegir_llista()
 esta_ordenada(a)

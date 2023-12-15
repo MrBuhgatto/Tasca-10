@@ -4,6 +4,7 @@ def any_traspas(any):
     else:
         print("L'any {} no és de traspàs".format(any))
 
-# Programa principal
+#Programa principal
 a = input("Indiqui un any amb 4 xifres (aaaa): ")
 any_traspas(int(a))
+
