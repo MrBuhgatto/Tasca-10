@@ -13,5 +13,5 @@ def senars():
     print("Els senars d'1 a 100 són {}".format(a))
 
 #Programa principal
-parells()
-senars()
+parells() #Crida a la funció
+senars() #Crida a la funció

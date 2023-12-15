@@ -1,3 +1,4 @@
+#Funció que verifica si un nombre és primer
 def es_primo(num):
     if num < 2:
         return False
@@ -6,7 +7,7 @@ def es_primo(num):
             return False
     return True
 
-# Programa Principal
+#Programa Principal
 nnumersprimers = 0
 b = []
 for num in range(1, 101):

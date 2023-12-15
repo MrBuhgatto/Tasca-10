@@ -1,3 +1,4 @@
+#Funció que retorna la suma dels nombres en un rang donat
 def sumar(a, b):
     suma = 0
     if a > b:
@@ -10,7 +11,7 @@ def sumar(a, b):
         suma = 0
     return suma
 
-# Programa principal
+#Programa principal
 a = int(input("Introdueixi el primer número: "))
 b = int(input("Introdueixi el segon número: "))
 c = sumar(a, b)
