@@ -1,5 +1,6 @@
 # Exercici 14: Definir una funció gran_de_tres(), donats tres números, retorni el major. Prova-la amb diferents exemples.
 
+#Funció per trobar el número més gran entre tres nombres
 def gran(a, b, c):
     if (a >= b):
         if (a >= c):
@@ -12,12 +13,15 @@ def gran(a, b, c):
         else:
             return c
 
-# Ús de la funció 
+#Entrada de tres nombres des de la terminal i crida a la funció gran
 x = input("Introdueixi el primer número a comparar: ")
 y = input("Introdueixi el segon número a comparar: ")
 z = input("Introdueixi el tercer número a comparar: ")
 c = gran(x, y, z)
+
+#Mostra el resultat
 print("El més gran és: ", c)
+
 
 
 
