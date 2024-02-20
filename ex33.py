@@ -1,5 +1,5 @@
 def comptar_vocals(a):
-    b = ('a', 'e', 'i', 'o', 'u', 'altres')  #Llista amb les vocals i altres caràcters
+    b = ('a')  #Llista amb les vocals i altres caràcters
     vocals = [0, 0, 0, 0, 0, 0]  #Llista per comptar les vocals
     for i, e in enumerate(a):
         if e in ('a', 'A', 'à', 'á', 'À', 'Á'):
